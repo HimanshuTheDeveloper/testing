@@ -17,20 +17,14 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function testBasicTest()
+    public function test_user_login_Test()
     {
        
-        $user = User::factory()->create(
-            [
-            'name' => 'Himanshu Singh',
-            'email' => 'newEmail@gmail.com'
-            ]
-        );
-    //     $response = $this->actingAs($user) ->get('/');
-    //    $response->assertStatus(200);
-       
-        $this->assertEquals('Himanshu Singh',$user->fullname);
-
+        $user = User::factory()->create();
+        
+        $response = $this->actingAs($user) ->get('/');
+        
+        $response->assertStatus(200);
        
     }
  

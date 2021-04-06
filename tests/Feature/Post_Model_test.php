@@ -14,11 +14,11 @@ class Post_Model_test extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function test_assert_data_into_database()
     {
-        $user = Post::factory()->create();
+        $post = Post::factory()->create();
 
-        $response = $this->actingAs($user) ->get('/');
+        $response = $this->actingAs($post) ->get('/');
 
         $response->assertStatus(200);
     }
