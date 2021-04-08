@@ -45,4 +45,10 @@ class User extends Authenticatable
     {
         return 'Himanshu Singh';
     }
+    
+    public function isMinor()
+    {
+        return $this->age < 18 ? true : false;
+    }
+    
 }

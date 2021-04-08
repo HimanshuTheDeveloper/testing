@@ -9,7 +9,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-class ExampleTest extends TestCase
+class UserLoginTest extends TestCase
 {
     use DatabaseMigrations;
     /**
@@ -17,7 +17,7 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function test_user_login_Test()
+    public function test_user_login()
     {
        
         $user = User::factory()->create();
@@ -27,5 +27,14 @@ class ExampleTest extends TestCase
         $response->assertStatus(200);
        
     }
- 
+    
+    public function user_has_age_attribute()
+    {
+        $user = User::factory()->make();
+        $this->assertNotNull($user->age);
+    }
+
+
+
+
 }

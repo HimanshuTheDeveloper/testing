@@ -29,8 +29,9 @@ class PostFactory extends Factory
             'published'     =>      true,
             'content'       =>      $this->faker->realText(500),
             'user_id'       =>      function () {
-                                    return User::inRandomOrder()->first()->id;
-            }
+                                        return User::inRandomOrder()->first()->id;
+                                    }
+
         ];
     }
 }

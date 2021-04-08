@@ -28,8 +28,8 @@ class User_Model_Test extends TestCase
        
         $user = User::factory()->create(
             [
-            'name' => 'Himanshu Singh',
-            'email' => 'newEmail@gmail.com'
+                'name' => 'Himanshu Singh',
+                'email' => 'newEmail@gmail.com'
             ]
         ); 
     
